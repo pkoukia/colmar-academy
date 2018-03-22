@@ -1,0 +1,796 @@
+  /* Universal */
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 0.80rem;
+  line-height: 1.3rem;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  font-size: 0.85rem;
+}
+
+.site-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+@media only screen and (min-width: 1150px) {
+  header {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+
+  /*  Larger viewport  */
+
+  .site-wrapper {
+    max-width: 1150px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.90rem;
+    line-height: 1.5rem;
+  }
+
+  a {
+    font-size: 0.95rem;
+  }
+}
+
+/*--  SECTION-INFO/POSTER:
+campus-info/thesis sections  --*/
+
+.section-info__text {
+  margin: 2rem 0;
+  padding: 0 3rem 0 1rem;
+}
+
+.section-info__text p {
+  padding: 0.5rem 0;
+}
+
+.section-info__text span {
+  color: black;
+}
+
+@media only screen and (min-width: 450px) {
+
+  /*  section-info:
+  adjust image size, center text  */
+
+  .section-info__box {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .section-info__text {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+
+  /*  section-info:
+   Large mobile viewport layout  */
+
+   .section-info__box {
+     display: flex;
+     align-items: center;
+     max-width: 100%;
+   }
+
+  .section-info__img {
+    width: 70%;
+    margin: 1rem;
+  }
+
+  .section-info__img--mirror {
+    order: 1;
+  }
+
+  .section-info__text {
+    margin: 0;
+    width: 70%;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .section-info__wrapper {
+    margin: 1rem;
+  }
+
+  .section-info__text--mirror {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+
+  /* section-poster/wrapper:
+   Tablet portrait layout */
+
+  .section-poster__text {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .section-poster__text p {
+    padding: 1.5rem 0 2rem 0;
+  }
+
+  .section-poster__text span {
+    font-size: 0.77rem;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+
+  /*  section-poster/info:
+  Tablet landscape, desktop layout  */
+
+  .section-poster {
+    max-width: 60%;
+  }
+
+  .section-poster__media {
+    padding: 2rem 1.5rem;
+  }
+
+  .section-poster__text {
+    text-align: left;
+  }
+
+  .section-info__box {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .section-info__img {
+    width: 35%;
+  }
+
+  .section-info__img--mirror {
+    order: 0;
+  }
+
+  .section-info__text {
+    padding: 0;
+    width: 50%;
+  }
+
+  .section-info__text--mirror {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+
+  /*  Section-info:
+  desktop hyperlink styling  */
+
+  .section-info__box:hover {
+    background-color: rgb(116, 57, 31);
+    color: rgb(15, 32, 49);
+    text-decoration: underline;
+    transition: all 500ms ease-in;
+  }
+
+  .section-info__box:active {
+    background-color: rgb(150, 170, 245);
+  }
+}
+
+/*---------------------------
+  #HEADER
+---------------------------*/
+
+nav {
+  height: 4rem;
+  display: flex;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+header nav ul {
+  align-items: center;
+}
+
+@media only screen and (min-width: 600px) {
+
+  /*  Nav bar layout for
+  large mobile viewports  */
+
+  nav {
+    padding: 0 1.5rem;
+  }
+
+  .mobile-nav {
+    justify-content: flex-end;
+  }
+
+  .mobile-logo {
+    display: none;
+  }
+
+  .mobile-nav__icons {
+    padding-left: 3rem;
+  }
+
+  .desktop-nav {
+    width: 100%;
+    display: flex;
+  }
+
+  .desktop-logo a {
+    font-size: 1rem;
+  }
+
+  .desktop-logo a span {
+    font-weight: 600;
+    color: rgb(15, 32, 49);
+  }
+
+  .desktop-nav li:nth-of-type(1n + 2) {
+    display: none;
+  }
+
+  .desktop-nav li a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+
+  /*  Remove mobile elements,
+   insert desktop viewport navigation  */
+
+   nav {
+     padding: 0 1rem 0 1.5rem;
+   }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-logo {
+    flex: 1;
+  }
+
+  .desktop-logo img {
+    width: 2.5rem;
+  }
+
+  .desktop-logo a {
+    font-size: 1.3rem;
+  }
+
+  .desktop-nav li:nth-of-type(1n + 2) {
+    display: flex;
+  }
+
+  .desktop-nav__text a {
+    font-weight: 500;
+    padding: 1.6rem 0.5rem;
+  }
+
+  .desktop-nav__text a:hover {
+    background-color: rgb(183, 84, 33);
+    color: rgb(255, 255, 255);
+    transition: all 550ms linear 75ms;
+  }
+
+  .desktop-nav__text a:active {
+    color: rgb(15, 32, 49);
+    background-color: rgb(150, 170, 245);
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+
+  /*  Always on-screen nav bar
+  for large viewports */
+
+  body {
+    position: relative;
+    top: 4rem;
+  }
+
+  header {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .desktop-nav__text a {
+    font-size: 1rem;
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+
+
+/*---------------------------
+  #BANNER
+---------------------------*/
+
+.banner {
+  background-color: rgb(183, 84, 33);
+  background-image: linear-gradient(to bottom, rgb(183, 84, 33), rgb(200, 131, 98));
+}
+
+.banner-text {
+  padding: 2rem 1rem;
+  max-width: 325px;
+  margin: 0 auto;
+}
+
+.banner-text h1 {
+  line-height: 2rem;
+}
+
+.banner-text p {
+  color: black;
+  margin: 1rem 0 1.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.7rem;
+}
+
+.banner-btn {
+  background-color: rgb(123, 66, 36);
+  color: rgb(255, 255, 255);
+  display: block;
+  font-size: 1.1rem;
+  padding: .5rem 0;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.banner-btn:active {
+  color: rgb(15, 32, 49);
+  background-color: rgb(211, 219, 227);
+}
+
+@media only screen and (min-width: 450px) {
+
+  /*  Center text and button  */
+
+  .banner-text {
+    text-align: center;
+    max-width: 500px;
+  }
+
+  .banner-btn {
+    width: 65%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+
+  /*  Increase button size for
+  large mobile viewport  */
+
+  .banner-btn {
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+
+  /*  Large viewport layout  */
+
+  .banner-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .banner-text {
+    max-width: 310px;
+    margin: 0;
+    text-align: left;
+  }
+
+  .banner-img {
+    padding: 2rem 1.5rem;
+    max-width: 60%;
+  }
+
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .banner-btn {
+    padding: .5rem 0;
+    font-size: 1.1rem;
+    margin: 0;
+    width: 100%;
+  }
+
+  .banner-btn:hover {
+    box-shadow: 0 7px 9px rgba(42, 77, 110, 0.7);
+    transform: scale(1.1);
+    transition: all 300ms ease-in;
+  }
+}
+
+
+
+/*---------------------------
+  #CAMPUS-INFO
+---------------------------*/
+
+.campus {
+  margin: 1rem 1rem 0 1rem;
+}
+
+.section-info__img .desktop {
+  display: none;
+}
+
+ .campus .section-poster {
+  display: none
+}
+
+@media only screen and (min-width: 550px) {
+
+  /*  Spacing adjustment: campus info  */
+
+  .campus {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+
+  /*  Display section-poster  */
+
+  .campus {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .campus .section-poster {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+
+  /*  Tablet landscape/desktop
+   viewport layout  */
+
+  .campus {
+    flex-direction: row;
+  }
+
+  .section-info__img .mobile {
+    display: none;
+  }
+
+  .section-info__img .desktop {
+    display: block;
+  }
+
+  .campus .section-poster {
+    border-right: 1px solid rgb(105, 55, 31);
+  }
+
+  .campus .section-poster__text {
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+
+  .campus .section-poster__text h1 {
+    font-size: 1.7rem; /* reduced to prevent text wrap */
+  }
+
+  .campus .section-info__wrapper {
+    margin: 1rem 0 0 0;
+  }
+
+  .campus .section-info__box:nth-of-type(2) {
+    border-top: 1px solid rgb(105, 55, 31);
+    border-bottom: 1px solid rgb(105, 55, 31);
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+
+  /*  Unify h1 headings
+  on large viewports  */
+
+  .campus .section-poster__text h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/*---------------------------
+  #CAMPUS-COURSES
+---------------------------*/
+
+.courses h1 {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.courses-wrapper {
+  margin: 0 1rem 2rem 1rem;
+}
+
+.course-box {
+  background-color: rgb(105, 55, 31);
+  margin-bottom: 0.5rem;
+}
+
+.course-box h2 {
+  padding: 2rem 1rem;
+}
+
+.course-box__img,
+.course-box__text {
+  display: none;
+}
+
+@media only screen and (min-width: 550px) {
+
+  /*  Hide course labels,
+  display 2 x 3 grid: course cards  */
+
+  .course-box__img,
+  .course-box__text {
+    display: block;
+  }
+
+  .courses {
+    background-color: rgb(183, 84, 33);
+    background-image: linear-gradient(to bottom, rgb(183, 84, 33), rgb(200, 131, 98));
+    padding-bottom: 2rem;
+  }
+
+  .courses-wrapper {
+    max-width: 534px;
+    height: 946px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  .course-box {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+    width: 251px;
+    height: 294px;
+  }
+
+  .course-box h2 {
+    padding: 1rem 0 1rem 1rem;
+    color: inherit;
+  }
+
+  .course-box__text {
+    padding-left: 1rem;
+    width: 90%;
+  }
+
+  .course-box__text h3 {
+    padding: 0.5rem 0;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+
+  /*  Display 3 x 2 grid: course cards,
+  desktop/tablet landscape layout  */
+
+  .courses-wrapper {
+    max-width: 816px;
+    height: 620px;
+  }
+
+  .course-box__img:hover {
+    opacity: 0.75;
+  }
+
+  .course-box:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(116, 57, 31);
+    box-shadow: 0 10px 12px rgba(42, 77, 110, 0.9);
+    transform: scale(1.1);
+    transition: all 550ms ease-in;
+  }
+
+  .course-box:active {
+    color: rgb(15, 32, 49);
+    background-color: rgb(116, 57, 31);
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+
+  /*  Large desktop viewport layout  */
+
+  .courses-wrapper {
+    max-width: 1006px;
+    height: 718px;
+  }
+
+  .course-box {
+    width: 314px;
+    height: 343px;
+  }
+
+  .course-box__text p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/*---------------------------
+  #THESIS
+---------------------------*/
+
+h1.thesis-title {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+
+.thesis {
+  padding-bottom: 1.5rem;
+}
+
+.thesis .section-poster__text,
+.thesis .section-info__box {
+  display: none;
+}
+
+@media only screen and (min-width: 720px) {
+
+  /*  Display section poster/info for
+  large mobile viewports  */
+
+  .thesis .section-poster__text {
+    display: block;
+  }
+
+  .thesis .section-info__box {
+    display: flex;
+  }
+
+  .thesis .section-info__img {
+    width: 35%;
+  }
+
+  .thesis .section-info__wrapper {
+    margin: 0 8rem;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+
+  /*  Desktop viewport layout  */
+
+  .thesis {
+    display: flex;
+  }
+
+  .thesis .section-poster__media {
+    padding: 1rem 1.5rem 0 1.5rem;
+  }
+
+  .thesis .section-poster__text {
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+  }
+
+  .thesis .section-info__wrapper {
+    margin: 0;
+  }
+}
+
+/*---------------------------
+  #FOOTER
+---------------------------*/
+
+footer {
+  font-size: 0.75rem;
+  background-color: rgb(255, 255, 255);
+}
+
+footer h4 {
+  padding: 1rem 1.5rem;
+}
+
+footer a {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+
+  /*  Tablet portrait viewport layout  */
+
+  footer a {
+    display: inline-block;
+    float: right;
+    font-size: 0.75rem;
+  }
+
+  footer a:hover {
+    color: rgb(15, 32, 49);
+    border-bottom: 1px solid rgb(15, 32, 49);
+    transition: all 750ms linear 0.15s;
+  }
+
+  .footer--space {
+    margin-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+
+  /*  Add top border on
+  large mobile viewoports  */
+
+  footer {
+    border-top: 1px solid rgb(211, 219, 227);
+  }
+}
+
+@media only screen and (min-width: 960px) {
+
+  /*  Desktop viewport layout  */
+
+  footer {
+    padding-bottom: 2.5rem;
+  }
+}
